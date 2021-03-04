@@ -26,7 +26,7 @@ class MainActivityTest {
         onView(textMatcher).perform(ViewActions.clearText())
         onView(textMatcher).perform(ViewActions.typeText(nameWritten) )
         closeSoftKeyboard()
-        
+
         onView(ViewMatchers.withId(R.id.goBtn)).perform(ViewActions.click())
 
         intended(IntentMatchers.hasExtra(EXTRA_MESSAGE, nameWritten))
