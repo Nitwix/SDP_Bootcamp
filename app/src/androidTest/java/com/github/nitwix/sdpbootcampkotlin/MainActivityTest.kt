@@ -1,5 +1,6 @@
 package com.github.nitwix.sdpbootcampkotlin
 
+import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.intent.Intents
@@ -23,7 +24,8 @@ class MainActivityTest {
         val nameWritten = "Niels Lachat";
         val textMatcher = ViewMatchers.withId(R.id.editTextTextPersonName)
         onView(textMatcher).perform(ViewActions.clearText())
-        onView(textMatcher).perform(ViewActions.typeText(nameWritten))
+        onView(textMatcher).perform(ViewActions.typeText(nameWritten) )
+        closeSoftKeyboard()
 
         onView(ViewMatchers.withId(R.id.goBtn)).perform(ViewActions.click())
 
