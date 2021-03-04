@@ -2,7 +2,7 @@ check_android_task:
   name: Run Android tests
   env:
     API_LEVEL: 29 # was 30 in bootcamp
-    TARGET: google_apis
+    TARGET: default # was google_apis
     ARCH: x86
     CC_TEST_REPORTER_ID: ENCRYPTED[abfda42577ae5745d46eeb2f25c49915038b292af8f3166a14e1cac8b4890fef]
   container:
